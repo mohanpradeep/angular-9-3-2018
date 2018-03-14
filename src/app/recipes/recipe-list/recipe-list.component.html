@@ -5,5 +5,8 @@
 </div>
 <hr>
 <div class="w-100 card food-block" >
-  <app-recipe-item class="border-0 rounded-0" *ngFor="let recipeEl of recipes" [recipe]= "recipeEl"></app-recipe-item>
+  <app-recipe-item class="border-0 rounded-0"
+  *ngFor="let recipeEl of recipes"
+  [recipe]= "recipeEl"
+  (recipeselected)="onRecipeselected(recipeEl)" ></app-recipe-item>
 </div>
