@@ -1,10 +1,10 @@
 
 <div class="row">
   <div class="col-12 col-sm-5">
-   <app-shopping-edit (demo)="addme($event)"></app-shopping-edit>
-    <div class="card">
-      <ul class="list-group list-group-flush" *ngFor="let ingredient of ingredients">
-        <li class="list-group-item">{{ ingredient.name }} <span class="badge badge-light float-right">{{ ingredient.amount }}</span></li>
+   <app-shopping-edit></app-shopping-edit>
+    <div class="card mb-3">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let ingredient of ingredients">{{ ingredient.name }} <span class="badge badge-light float-right">{{ ingredient.amount }}</span></li>
       </ul>
     </div>
   </div>

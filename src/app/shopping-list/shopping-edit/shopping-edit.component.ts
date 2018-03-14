@@ -1,24 +1,16 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit,  ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
-  styleUrls: ['./shopping-edit.component.css']
+  styleUrls: ['./shopping-edit.component.css'],
+  encapsulation: ViewEncapsulation.Emulated,
 })
 export class ShoppingEditComponent implements OnInit {
- @Output() demo = new EventEmitter<{Servename: string, Serveamout: number }>();
-  constructor() { }
-  name = '';
-  amount: any;
+
+  constructor() {}
 
   ngOnInit() {
   }
-  add() {
-    this.demo.emit({
-      Servename: this.name,
-      Serveamout: this.amount
-    });
-    this.name = '';
-    this.amount = '';
-  }
+
 }
