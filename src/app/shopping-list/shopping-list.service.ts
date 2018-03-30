@@ -21,9 +21,6 @@ export class ShoppingListService {
   }
 
   getaddshopping(ingredients: Ingredinent[]) {
-    // for (let ingredient of ingredients) {
-    //   this.getaddshoppings(ingredient);
-    // }
     this.ingredients.push(...ingredients);
     this.ShoppingListServiceAdd.emit(this.ingredients.slice());
   }

@@ -6,6 +6,7 @@
 <hr>
 <div class="w-100 card food-block" >
   <app-recipe-item class="border-0 rounded-0"
-  *ngFor="let recipeEl of recipes"
-  [recipe]= "recipeEl"></app-recipe-item>
+  *ngFor="let recipeEl of recipes; let i = index"
+  [recipe]= "recipeEl"
+  [index]="i"></app-recipe-item>
 </div>
